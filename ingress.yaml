@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress 
+metadata:
+  name: arun-ingress
+  namespace: arun-ns
+spec:
+  rules:
+  - host: arun.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: arun-svc
+            port:
+              number: 80
