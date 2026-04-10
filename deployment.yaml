@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+name:  arun-depl
+namespace: arun-ns
+spec: 
+replicas: 2
+selector:
+matchlabels:
+app: arun-label
+template:
+metadata:
+labels:
+app: arun-label
+spec: 
+- containers:
+ - name: arun-conty
+ image: arun-img
+ ports: 80
+ containerPort: 3000
+
