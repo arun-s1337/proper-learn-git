@@ -1,7 +1,8 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: 
+  name: arun-dev-hpa
+  namespace: arun-ns  
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
